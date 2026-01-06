@@ -1,10 +1,14 @@
 import { useOnyxMp3Nfts } from "../hooks/useOnyxMp3Nfts";
+import { useWallet } from "@solana/wallet-adapter-react";
+
 import WalletBar from "../components/WalletBar";
 import LibraryList from "../components/LibraryList";
 
 
 export default function AppLayout({ children }) {
-const { items } = useOnyxMp3Nfts();
+const { publicKey } = useWallet();
+const { items } = useOnyxMp3Nfts(publicKey);
+
   return (
     <div style={styles.shell}>
       <WalletBar />
