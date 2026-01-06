@@ -28,4 +28,3 @@ export default function WebampPlayer() {
 
   return <div ref={containerRef} />;
 }
-

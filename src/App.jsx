@@ -1,10 +1,11 @@
+import AppLayout from "./layout/AppLayout";
 import WebampPlayer from "./WebampPlayer";
 
 function App() {
   return (
-    <div>
+    <AppLayout>
       <WebampPlayer />
-    </div>
+    </AppLayout>
   );
 }
 
