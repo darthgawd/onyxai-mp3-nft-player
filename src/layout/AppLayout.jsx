@@ -1,8 +1,10 @@
+import { useOnyxMp3Nfts } from "../hooks/useOnyxMp3Nfts";
 import WalletBar from "../components/WalletBar";
 import LibraryList from "../components/LibraryList";
 
 
 export default function AppLayout({ children }) {
+const { items } = useOnyxMp3Nfts();
   return (
     <div style={styles.shell}>
       <WalletBar />
@@ -10,28 +12,8 @@ export default function AppLayout({ children }) {
       <div style={styles.app}>
        <aside style={styles.sidebar}>
   <h3>Library</h3>
-  <LibraryList
-    items={[
-      {
-        id: "show",
-        metadata: {
-          name: "Onyx Demo Track",
-          image: "https://picsum.photos/200",
-          attributes: [{ trait_type: "app", value: "onyx" }],
-          properties: {
-            files: [{ uri: "ipfs://demo/track.mp3", mimeType: "audio/mpeg" }],
-          },
-        },
-      },
-      {
-        id: "hide",
-        metadata: {
-          name: "Random NFT",
-          image: "https://picsum.photos/200",
-        },
-      },
-    ]}
-  />
+ <LibraryList items={items} />
+
 </aside>
 
 
