@@ -1,4 +1,6 @@
 import WalletBar from "../components/WalletBar";
+import LibraryList from "../components/LibraryList";
+
 
 export default function AppLayout({ children }) {
   return (
@@ -6,10 +8,32 @@ export default function AppLayout({ children }) {
       <WalletBar />
 
       <div style={styles.app}>
-        <aside style={styles.sidebar}>
-          <h3>Library</h3>
-          <p>(NFTs will appear here)</p>
-        </aside>
+       <aside style={styles.sidebar}>
+  <h3>Library</h3>
+  <LibraryList
+    items={[
+      {
+        id: "show",
+        metadata: {
+          name: "Onyx Demo Track",
+          image: "https://picsum.photos/200",
+          attributes: [{ trait_type: "app", value: "onyx" }],
+          properties: {
+            files: [{ uri: "ipfs://demo/track.mp3", mimeType: "audio/mpeg" }],
+          },
+        },
+      },
+      {
+        id: "hide",
+        metadata: {
+          name: "Random NFT",
+          image: "https://picsum.photos/200",
+        },
+      },
+    ]}
+  />
+</aside>
+
 
         <main style={styles.main}>{children}</main>
       </div>
