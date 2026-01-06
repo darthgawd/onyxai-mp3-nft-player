@@ -1,0 +1,25 @@
+{
+  "name": "Onyx Demo Track",
+  "artist": "Onyx",
+  "image": "ipfs://QmcLHFLVfQxPiQD5UABfXmrGp1ucygn8gEWWwByfit55p7",
+  "attributes": [
+    {
+      "trait_type": "app",
+      "value": "onyx"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "ipfs://QmWcz9LhKmfFBiFeGye2fpGvr8MPpu7oodT81LUdzmrAMC",
+        "mimeType": "audio/mpeg",
+        "category": "audio"
+      },
+      {
+        "uri": "ipfs://QmcLHFLVfQxPiQD5UABfXmrGp1ucygn8gEWWwByfit55p7",
+        "mimeType": "image/*",
+        "category": "image"
+      }
+    ]
+  }
+}

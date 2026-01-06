@@ -16,7 +16,8 @@ for (const key of REQUIRED) {
 export const PINATA_JWT = process.env.PINATA_JWT;
 export const CLUSTER = process.env.SOLANA_CLUSTER || "devnet";
 
-export const connection = new Connection(clusterApiUrl(CLUSTER));
+export const connection = new Connection(clusterApiUrl(CLUSTER), "confirmed");
+
 
 const keypairPath = process.env.SOLANA_KEYPAIR_PATH
   .replace(/^\$HOME/, process.env.HOME)
