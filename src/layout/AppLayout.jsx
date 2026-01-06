@@ -7,24 +7,21 @@ export default function AppLayout({ children }) {
       </aside>
 
       <main style={styles.main}>{children}</main>
-
-      <aside style={styles.sidebar}>
-        <h3>Now Playing</h3>
-        <p>(Track info)</p>
-      </aside>
     </div>
   );
 }
 
 const styles = {
-  app: {
-    display: "grid",
-    gridTemplateColumns: "200px 1fr 200px",
-    height: "100vh",
-    background: "#111",
-    color: "#eee",
-    fontFamily: "sans-serif",
-  },
+app: {
+  position: "fixed",
+  inset: 0,
+  display: "grid",
+  gridTemplateColumns: "220px 1fr",
+  background: "#111",
+  color: "#eee",
+  fontFamily: "sans-serif",
+},
+
   sidebar: {
     padding: "1rem",
     borderRight: "1px solid #333",
@@ -35,3 +32,4 @@ const styles = {
     alignItems: "center",
   },
 };
+
