@@ -1,27 +1,35 @@
+import WalletBar from "../components/WalletBar";
+
 export default function AppLayout({ children }) {
   return (
-    <div style={styles.app}>
-      <aside style={styles.sidebar}>
-        <h3>Library</h3>
-        <p>(NFTs will appear here)</p>
-      </aside>
+    <div style={styles.shell}>
+      <WalletBar />
 
-      <main style={styles.main}>{children}</main>
+      <div style={styles.app}>
+        <aside style={styles.sidebar}>
+          <h3>Library</h3>
+          <p>(NFTs will appear here)</p>
+        </aside>
+
+        <main style={styles.main}>{children}</main>
+      </div>
     </div>
   );
 }
 
 const styles = {
-app: {
-  position: "fixed",
-  inset: 0,
-  display: "grid",
-  gridTemplateColumns: "220px 1fr",
-  background: "#111",
-  color: "#eee",
-  fontFamily: "sans-serif",
-},
-
+  shell: {
+    position: "fixed",
+    inset: 0,
+    background: "#111",
+    color: "#eee",
+    fontFamily: "sans-serif",
+  },
+  app: {
+    display: "grid",
+    gridTemplateColumns: "220px 1fr",
+    height: "calc(100% - 49px)",
+  },
   sidebar: {
     padding: "1rem",
     borderRight: "1px solid #333",

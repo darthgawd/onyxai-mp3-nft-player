@@ -24,9 +24,9 @@ export default [
     rules: {
       ...js.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
-        // React JSX uses imports implicitly
-        //["warn", { argsIgnorePattern: "^_" }]
-  "no-unused-vars": "off",
+      // React JSX uses imports implicitly
+      //["warn", { argsIgnorePattern: "^_" }]
+      "no-unused-vars": "off",
       "react-refresh/only-export-components": [
         "warn",
         { allowConstantExport: true },
