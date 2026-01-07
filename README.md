@@ -7,7 +7,7 @@ This repo intentionally separates responsibilities:
 - **Frontend (Vite + React):** connect wallet, load NFTs owned by the wallet, fetch metadata JSON from IPFS, play **MP3 previews** in Webamp.
 - **Node scripts (in `scripts/mint/`):** upload MP3 + artwork + metadata JSON to IPFS (Pinata), then mint the NFT on **Solana devnet**.
 
-This is built as a DevOps/security-friendly demo: clear trust boundaries, reproducible scripts, and defensive guards around untrusted metadata.
+This is built as a DevOps/security web3 application: clear trust boundaries, reproducible scripts, and defensive guards around untrusted metadata.
 
 ---
 
@@ -15,17 +15,9 @@ This is built as a DevOps/security-friendly demo: clear trust boundaries, reprod
 2) **Identity pipeline** (metadata JSON controls title/cover/audio links)
 3) **Mint pipeline** (NFT minted to a wallet on devnet)
 4) **Client library** (browser reads wallet NFTs + plays preview audio)
-5) **Robustness** (guards against broken/placeholder IPFS metadata so the UI doesn’t crash)
 
----
-### Root
-- `vite.config.js` — Vite configuration (bundling, polyfills if enabled, etc.)
-- `index.html` — Vite entry HTML
-- `package.json` / `pnpm-lock.yaml` — dependencies
-- `output/` — generated output artifacts (ex: `metadata-*.json`)
-- `public/`
-  - `public/audio/demo.mp3` — demo audio
-  - `public/art/demo-cover.jpg` — demo cover art
+
+
 
 ### Scripts
 - `scripts/docgen-functions.mjs` — generates `DOCS_FUNCTIONS.md`
