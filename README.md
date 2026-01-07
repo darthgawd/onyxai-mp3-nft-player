@@ -11,10 +11,6 @@ This is built as a DevOps/security-friendly demo: clear trust boundaries, reprod
 
 ---
 
-## Why this exists (what it proves)
-
-This project proves you can build a real end-to-end Web3 media pipeline:
-
 1) **Asset pipeline** (MP3 + cover art → IPFS)
 2) **Identity pipeline** (metadata JSON controls title/cover/audio links)
 3) **Mint pipeline** (NFT minted to a wallet on devnet)
@@ -22,9 +18,6 @@ This project proves you can build a real end-to-end Web3 media pipeline:
 5) **Robustness** (guards against broken/placeholder IPFS metadata so the UI doesn’t crash)
 
 ---
-
-## Repo structure (matches your tree)
-
 ### Root
 - `vite.config.js` — Vite configuration (bundling, polyfills if enabled, etc.)
 - `index.html` — Vite entry HTML
