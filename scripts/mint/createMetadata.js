@@ -24,4 +24,3 @@ export function writeJsonTemp(obj) {
   fs.writeFileSync(filePath, JSON.stringify(obj, null, 2), "utf8");
   return filePath;
 }
-

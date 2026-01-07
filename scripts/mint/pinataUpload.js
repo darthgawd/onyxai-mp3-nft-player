@@ -35,4 +35,3 @@ export async function pinFileToIpfs(filePath) {
 
   return `ipfs://${json.IpfsHash}`;
 }
-

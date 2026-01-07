@@ -1,9 +1,7 @@
 import { isOnyxMp3Nft } from "../lib/isOnyxMp3Nft";
 
 export default function LibraryList({ items }) {
-  const filtered = (items || []).filter((nft) =>
-    isOnyxMp3Nft(nft.metadata)
-  );
+  const filtered = (items || []).filter((nft) => isOnyxMp3Nft(nft.metadata));
 
   if (!items) return <p>Loading…</p>;
   if (filtered.length === 0) return <p>No Onyx MP3 NFTs found.</p>;
@@ -18,4 +16,3 @@ export default function LibraryList({ items }) {
     </ul>
   );
 }
-

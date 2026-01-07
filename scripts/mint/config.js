@@ -18,14 +18,13 @@ export const CLUSTER = process.env.SOLANA_CLUSTER || "devnet";
 
 export const connection = new Connection(clusterApiUrl(CLUSTER), "confirmed");
 
+const keypairPath = process.env.SOLANA_KEYPAIR_PATH.replace(
+  /^\$HOME/,
+  process.env.HOME,
+).replace(/^~\//, `${process.env.HOME}/`);
 
-const keypairPath = process.env.SOLANA_KEYPAIR_PATH
-  .replace(/^\$HOME/, process.env.HOME)
-  .replace(/^~\//, `${process.env.HOME}/`);
-
-const secretKey = JSON.parse(fs.readFileSync(path.resolve(keypairPath), "utf8"));
-
-export const wallet = Keypair.fromSecretKey(
-  Uint8Array.from(secretKey)
+const secretKey = JSON.parse(
+  fs.readFileSync(path.resolve(keypairPath), "utf8"),
 );
 
+export const wallet = Keypair.fromSecretKey(Uint8Array.from(secretKey));

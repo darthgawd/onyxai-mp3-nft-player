@@ -4,22 +4,19 @@ import { useWallet } from "@solana/wallet-adapter-react";
 import WalletBar from "../components/WalletBar";
 import LibraryList from "../components/LibraryList";
 
-
 export default function AppLayout({ children }) {
-const { publicKey } = useWallet();
-const { items } = useOnyxMp3Nfts(publicKey);
+  const { publicKey } = useWallet();
+  const { items } = useOnyxMp3Nfts(publicKey);
 
   return (
     <div style={styles.shell}>
       <WalletBar />
 
       <div style={styles.app}>
-       <aside style={styles.sidebar}>
-  <h3>Library</h3>
- <LibraryList items={items} />
-
-</aside>
-
+        <aside style={styles.sidebar}>
+          <h3>Library</h3>
+          <LibraryList items={items} />
+        </aside>
 
         <main style={styles.main}>{children}</main>
       </div>
@@ -50,4 +47,3 @@ const styles = {
     alignItems: "center",
   },
 };
-

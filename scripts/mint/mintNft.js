@@ -12,7 +12,7 @@ async function main() {
 
   const { nft } = await metaplex.nfts().create({
     uri: metadataUri,
-    name: "Onyx MP3 NFT",
+    name: "Onyx MP3 NFT #${Date.now()}",
     sellerFeeBasisPoints: 0,
   });
 
@@ -24,4 +24,3 @@ main().catch((err) => {
   console.error(err);
   process.exit(1);
 });
-

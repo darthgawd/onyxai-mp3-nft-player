@@ -17,7 +17,7 @@ async function main() {
 
   if (!name || !artist || !mp3Path || !artPath) {
     console.error(
-      "Usage: node scripts/mint/uploadMetadata.js --name <name> --artist <artist> --mp3 <mp3-path> --art <image-path>"
+      "Usage: node scripts/mint/uploadMetadata.js --name <name> --artist <artist> --mp3 <mp3-path> --art <image-path>",
     );
     process.exit(1);
   }
@@ -50,4 +50,3 @@ main().catch((err) => {
   console.error(err);
   process.exit(1);
 });
-
