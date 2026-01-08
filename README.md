@@ -1,3 +1,5 @@
+[screen.png](https://github.com/darthgawd/onyxai-mp3-nft-player/blob/main/screen.png)
+
 # Onyx MP3 NFT Player (Winamp-Style) — Solana Devnet + IPFS (Pinata)
 
 A **wallet-native audio library** for **MP3 preview NFTs** on Solana, with a **Winamp-style Webamp UI**.
