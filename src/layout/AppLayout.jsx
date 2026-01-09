@@ -1,3 +1,5 @@
+// src/layout/AppLayout.jsx
+import { Children, cloneElement, isValidElement } from "react";
 import { useOnyxMp3Nfts } from "../hooks/useOnyxMp3Nfts";
 import { useWallet } from "@solana/wallet-adapter-react";
 
@@ -7,6 +9,11 @@ import LibraryList from "../components/LibraryList";
 export default function AppLayout({ children }) {
   const { publicKey } = useWallet();
   const { items } = useOnyxMp3Nfts(publicKey);
+
+  const enhancedChildren = Children.map(children, (child) => {
+    if (isValidElement(child)) return cloneElement(child, { items });
+    return child;
+  });
 
   return (
     <div style={styles.shell}>
@@ -18,11 +25,13 @@ export default function AppLayout({ children }) {
           <LibraryList items={items} />
         </aside>
 
-        <main style={styles.main}>{children}</main>
+        <main style={styles.main}>{enhancedChildren}</main>
       </div>
     </div>
   );
 }
+
+// keep your existing styles below...
 
 const styles = {
   shell: {
