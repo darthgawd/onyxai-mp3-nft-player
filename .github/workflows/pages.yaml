@@ -1,0 +1,2 @@
+uses: actions/upload-pages-artifact
+uses: actions/deploy-pages
