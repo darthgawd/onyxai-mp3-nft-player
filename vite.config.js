@@ -3,6 +3,8 @@ import react from "@vitejs/plugin-react";
 import { nodePolyfills } from "vite-plugin-node-polyfills";
 
 export default defineConfig({
+  base: "/onyxai-mp3-nft-player/",
+
   plugins: [
     react(),
     nodePolyfills({
@@ -14,7 +16,9 @@ export default defineConfig({
       protocolImports: true,
     }),
   ],
+
   define: {
     global: "globalThis",
   },
 });
+
