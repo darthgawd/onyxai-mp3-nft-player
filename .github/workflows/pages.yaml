@@ -39,6 +39,9 @@ jobs:
       - name: Lint
         run: pnpm lint
 
+      - name: Prettier
+        run: pnpm format
+
       - name: Build
         run: pnpm build
 
