@@ -1,4 +1,4 @@
-[screen.png](https://github.com/darthgawd/onyxai-mp3-nft-player/blob/main/screen.png)
+![screen.png](https://github.com/darthgawd/onyxai-mp3-nft-player/blob/main/screen.png)
 
 # Onyx MP3 NFT Player (Winamp-Style) — Solana Devnet + IPFS (Pinata)
 
